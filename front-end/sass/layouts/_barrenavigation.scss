@@ -1,0 +1,27 @@
+header{
+    .bg-header {
+        background-color: $color-secondary;
+        nav {
+            img {
+                width: 120px;
+            }
+            .nav-articles {
+                font-size: 1.2em;
+                color: $color-primary;
+                text-decoration: none;
+
+            }
+            .nav-shop {
+                text-decoration: none;
+                .fas {
+                    font-size: 1.5em;
+                    display: block;
+                    background: linear-gradient(164deg, rgba(229,138,32,1) 4%, rgba(142,92,250,1) 68%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            
+        }
+    }
+}

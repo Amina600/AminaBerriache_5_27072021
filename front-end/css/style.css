@@ -1,3 +1,23 @@
-
+header .bg-header {
+  background-color: #f3e9f1;
+}
+header .bg-header nav img {
+  width: 120px;
+}
+header .bg-header nav .nav-articles {
+  font-size: 1.2em;
+  color: #261623;
+  text-decoration: none;
+}
+header .bg-header nav .nav-shop {
+  text-decoration: none;
+}
+header .bg-header nav .nav-shop .fas {
+  font-size: 1.5em;
+  display: block;
+  background: linear-gradient(164deg, #e58a20 4%, #8e5cfa 68%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 /*# sourceMappingURL=style.css.map */
