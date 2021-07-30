@@ -20,4 +20,25 @@ header .bg-header nav .nav-shop .fas {
   -webkit-text-fill-color: transparent;
 }
 
+footer {
+  background-color: #261623;
+}
+footer .container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+footer .container ul {
+  margin: 0;
+  padding: 0;
+}
+footer .container ul li {
+  list-style: none;
+  text-align: center;
+}
+footer .container ul a {
+  color: #f3e9f1;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=style.css.map */

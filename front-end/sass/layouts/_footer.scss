@@ -1,0 +1,19 @@
+footer {
+    background-color: $color-primary;
+    .container {
+       padding-top: 50px;
+       padding-bottom: 50px;
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                list-style: none;
+                text-align: center;
+            }a {
+                color: $color-secondary;
+                font-size: 1.1em;
+                text-decoration: none;
+            }
+        }
+    }
+}
