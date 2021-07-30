@@ -4,23 +4,31 @@ fetch("http://localhost:3000/api/teddies")
     //transforme le résultat en json
     .then(function(res) {
         if (res.ok) {
-            afficherProduits(res.json());
             return res.json();
         }
     })
+    .then(function(produits) {
+        afficherProduits(produits);
+    })
     .catch(function(err) {
-        // TODO afficher une erreur
+        alert("Impossible de charger les produits");
     });
 
 //Affichage produits sur la page
 function afficherProduits(produits) {
-    //TODO afficher les produits
+    let data = [];
+    for (let produit of produits) {
+        data.push([produit._id, produit.name, produit.imageUrl, produit.price, produit.description, produit.colors]);
+    }
     $('#example').DataTable( {
-        data: produits.products,
+        data: data,
         columns: [
+            { title: "id" },
             { title: "name" },
-            { title: "price" }
-        
+            { title: "image" },
+            { title: "price" },
+            { title: "description" },
+            { title: "colors" }
         ]
     } );
 }
