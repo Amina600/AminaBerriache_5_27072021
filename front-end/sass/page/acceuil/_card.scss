@@ -1,0 +1,30 @@
+.card {
+   height: 300px;
+   margin-bottom: 30px;
+   border-radius: 12px !important; 
+   border: none !important; 
+   box-shadow: 1px 3px 8px rgb(180, 180, 180);
+    a:hover {
+       text-decoration: none;
+
+    }
+
+    &--photo{
+        width: 100%;
+        object-fit: cover;
+        height: 235px;
+        border-radius:  12px 12px 0px 0px !important; 
+    }
+    &--info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $color-primary;
+        margin: 10px;
+    }
+
+    
+   
+
+}

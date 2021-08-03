@@ -1,5 +1,7 @@
 @import "./utils/variables";
+@import "./utils/mixin";
 @import "./base/base";
 @import "./layouts/barrenavigation";
 @import"./page/acceuil/card";
+@import "./page/detail-produit/details.scss";
 @import "./layouts/footer";

@@ -45,6 +45,49 @@ header .bg-header nav .nav-shop .fas {
   margin: 10px;
 }
 
+.detail-photo {
+  height: 400px;
+  object-fit: cover;
+  margin: 50px;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+.detail-info--name {
+  height: 35px;
+  border-bottom: solid 1px #261623;
+  margin-bottom: 30px;
+}
+.detail-info--price {
+  height: 35px;
+  border-bottom: solid 1px #261623;
+  margin-bottom: 30px;
+}
+.detail-info--color {
+  margin-bottom: 30px;
+}
+.detail-info .btn {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #261623 !important;
+  border: none !important;
+  font-size: 1.2em;
+  padding-bottom: 13px;
+  padding-top: 13px;
+}
+.detail-info .btn:hover {
+  background-color: #462941 !important;
+  border: none !important;
+}
+.detail-info--description {
+  height: 35px;
+  border-bottom: solid 1px #261623;
+  margin-bottom: 10px;
+}
+
 footer {
   background-color: #261623;
 }
@@ -66,4 +109,4 @@ footer .container ul a {
   text-decoration: none;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=details.css.map */

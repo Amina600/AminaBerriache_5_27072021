@@ -1,0 +1,44 @@
+
+
+.detail-photo {
+    height: 400px;
+    object-fit: cover;
+    margin: 50px;
+}
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    &--name {
+        @include border-bottom;
+        margin-bottom: 30px;
+    }
+    &--price {
+        @include border-bottom;
+        margin-bottom: 30px;
+    }
+    &--color {
+        margin-bottom: 30px;
+
+    }
+    .btn {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background-color: $color-primary !important;
+        border: none !important;
+        font-size: 1.2em;
+        padding-bottom:13px ;
+        padding-top: 13px ;
+        &:hover {
+            background-color: lighten($color: #261623, $amount: 10%) !important;
+            border: none !important;
+            
+        }
+    }
+    &--description {
+        @include border-bottom;
+        margin-bottom: 10px;
+
+    }
+    
+}

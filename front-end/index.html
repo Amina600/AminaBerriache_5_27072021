@@ -12,6 +12,7 @@
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <header>
@@ -35,10 +36,32 @@
     </header>
     <article>
         <div class="container">
-            <h3>listes des produits</h2>
+            
+            <select id="article" class="custom-select mb-3" onchange="modifierArticle()">
+                <option selected>Catégories des produits</option>
+                <option value="teddies">Ours en peluche</option>
+                <option value="cameras">Caméras vintage</option>
+                <option value="furniture">Meubles en chêne</option>
+            </select>
             <table id="example" class="display" width="100%"></table>
         </div>
     </article>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <a href="detail-produit.html">
+                        <img src="http://localhost:3000/images/oak_1.jpg" class="card--photo" alt="photo de l'article"/>
+                        <p class="card--info">
+                            <span class="card--name"><strong>Cross table</strong></span>
+                            <span class="card--price"><strong>30 €</strong></span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <footer id="footer">
         <div class="container">
             <ul class="row">

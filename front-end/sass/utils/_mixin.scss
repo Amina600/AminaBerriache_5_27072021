@@ -1,0 +1,6 @@
+@mixin border-bottom {
+    //width: 100px;
+    height: 35px;
+   
+    border-bottom: solid 1px $color-primary;
+}
