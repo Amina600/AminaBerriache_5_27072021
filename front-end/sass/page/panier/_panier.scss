@@ -1,0 +1,49 @@
+h3 {
+    margin-top: 100px !important;
+}
+
+.container-form {
+    margin-top: 20px;
+    padding: 20px;
+    //background-color: lighten($color: $color-secondary, $amount: 2%);
+    box-shadow: 1px 3px 8px rgb(180, 180, 180);
+}
+
+.container-resume {
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 1px 3px 8px rgb(180, 180, 180);
+    &--commande {
+        display: flex;
+        align-content: space-around;
+        margin-bottom: 15px;
+        border-bottom: 1px solid grey;
+        img {
+            width: 150px;
+            object-fit: cover;
+            margin: 10px;
+            
+        }
+        .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 40px;
+            &-details{
+                display: flex;
+                flex-direction: column;
+            }
+            &-price {
+                margin-left: 105px;
+            }
+        }
+    }
+    &--total {
+        border-bottom: 1px solid grey;
+        .show-total {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+

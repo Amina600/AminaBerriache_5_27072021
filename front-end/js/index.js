@@ -1,62 +1,50 @@
 
 //chargement de la liste de produits
-let url="http://localhost:3000/api/";
-let article= "furniture";
+const url="http://localhost:3000/api/";
+let category= "teddies";
 loadUrl();
 
 function loadUrl(){
-fetch(url+article)
-    //transforme le résultat en json
-    .then(function(res) {
-        if (res.ok) {
-            return res.json();
-        }
-    })
-    .then(function(produits) {
-        
-        afficherProduits(produits);
-    })
-    .catch(function(err) {
-        alert("Impossible de charger les produits");
-    });
-}
-//Affichage produits sur la page
-//$('#example').clear();
-function afficherProduits(produits) {
-    
-    let data = [];
-    for (let produit of produits) {
-        data.push([produit._id, produit.name, produit.imageUrl, produit.price, produit.description]);
-    }
-    
-    $('#example').DataTable( {
-        data: data,
-        "columnDefs": [
-            {
-                "targets": [ 0 ],
-                "visible": false,
+    fetch(url+category)
+        //transforme le résultat en json
+        .then(function(res) {
+            if (res.ok) {
+                return res.json();
             }
-        ],
-        columns: [
-            { title: "id" },
-            { title: "name" },
-            { title: "image" },
-            { title: "price" },
-            { title: "description" },
-           
-        ]
-    } );
+        })
+        .then(function(products) {
+            displayProducts(products);
+        })
+        .catch(function(err) {
+            alert("Impossible de charger les produits");
+        });
 }
-function modifierArticle() {
-    var select_article = document.getElementById("article");
-    console.log(select_article.value);
-    
-    article = select_article.value;
-  
-   var table = $('#example').DataTable();
- 
-table.clear();
-    
+
+//Affichage produits sur la page
+function displayProducts(products) {
+    //vider le conteneur
+    document.getElementById("product-container").innerHTML = '';
+    //Ajouter les produits
+    for(product of products){
+        document.getElementById("product-container").innerHTML += `
+        <div class="col-4">
+            <div class="card">
+                <a href="detail-produit.html">
+                    <img src="${product.imageUrl}" class="card--photo" alt="photo de l'article"/>
+                    <p class="card--info">
+                        <span class="card--name"><strong>${product.name}</strong></span>
+                        <span class="card--price"><strong>${product.price / 100}€</strong></span>
+                    </p>
+                </a>
+            </div>
+        </div>`    
+    } 
 }
-loadUrl();
+
+//changement de catégorie
+function changeCategory() {
+    var selectCategory = document.getElementById("category");
+    category = selectCategory.value;
+    loadUrl();  
+}
 

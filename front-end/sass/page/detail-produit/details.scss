@@ -1,9 +1,10 @@
 
 
 .detail-photo {
-    height: 400px;
+    max-width: 500px;
     object-fit: cover;
     margin: 50px;
+    border-radius: 10px;
 }
 .detail-info {
     display: flex;

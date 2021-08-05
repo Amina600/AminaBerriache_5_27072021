@@ -46,9 +46,10 @@ header .bg-header nav .nav-shop .fas {
 }
 
 .detail-photo {
-  height: 400px;
+  max-width: 500px;
   object-fit: cover;
   margin: 50px;
+  border-radius: 10px;
 }
 
 .detail-info {
@@ -86,6 +87,53 @@ header .bg-header nav .nav-shop .fas {
   height: 35px;
   border-bottom: solid 1px #261623;
   margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 100px !important;
+}
+
+.container-form {
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: 1px 3px 8px #b4b4b4;
+}
+
+.container-resume {
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: 1px 3px 8px #b4b4b4;
+}
+.container-resume--commande {
+  display: flex;
+  align-content: space-around;
+  margin-bottom: 15px;
+  border-bottom: 1px solid grey;
+}
+.container-resume--commande img {
+  width: 150px;
+  object-fit: cover;
+  margin: 10px;
+}
+.container-resume--commande .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40px;
+}
+.container-resume--commande .info-details {
+  display: flex;
+  flex-direction: column;
+}
+.container-resume--commande .info-price {
+  margin-left: 105px;
+}
+.container-resume--total {
+  border-bottom: 1px solid grey;
+}
+.container-resume--total .show-total {
+  display: flex;
+  justify-content: space-between;
 }
 
 footer {
