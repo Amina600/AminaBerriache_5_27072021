@@ -12,7 +12,6 @@ function loadUrl(){
                 return res.json();
             }
         })
-        
         .then(function(products) {
             displayProducts(products);
         })
