@@ -1,5 +1,3 @@
-
-
 .detail-photo {
     max-width: 500px;
     object-fit: cover;
@@ -36,10 +34,23 @@
             
         }
     }
+    &--quantity {
+        margin-top: 30px;
+        margin-left: 13px;
+        width: 100px;
+    }
     &--description {
-        @include border-bottom;
-        margin-bottom: 10px;
+        height: 90px;
+        border-bottom: solid 1px $color-primary;
+        margin-bottom: 100px;
 
     }
-    
+    .selected {
+        display: flex;
+        select {
+            height: 30px;
+            width: 100px;
+            margin-left: 20px;
+        }
+    }
 }

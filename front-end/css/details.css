@@ -1,3 +1,12 @@
+h4 {
+  font-size: 1.4em !important;
+  margin-top: 50px !important;
+  margin-bottom: 20px !important;
+  color: #261623 !important;
+  font-weight: 400 !important;
+  text-align: center;
+}
+
 header .bg-header {
   background-color: #f3e9f1;
 }
@@ -22,7 +31,8 @@ header .bg-header nav .nav-shop .fas {
 
 .card {
   height: 300px;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
   border-radius: 12px !important;
   border: none !important;
   box-shadow: 1px 3px 8px #b4b4b4;
@@ -83,10 +93,23 @@ header .bg-header nav .nav-shop .fas {
   background-color: #462941 !important;
   border: none !important;
 }
+#detail-info--quantity {
+  margin-top: 30px;
+  margin-left: 13px;
+  width: 100px;
+}
 #detail-info--description {
-  height: 35px;
+  height: 90px;
   border-bottom: solid 1px #261623;
-  margin-bottom: 10px;
+  margin-bottom: 100px;
+}
+#detail-info .selected {
+  display: flex;
+}
+#detail-info .selected select {
+  height: 30px;
+  width: 100px;
+  margin-left: 20px;
 }
 
 h3 {

@@ -1,3 +1,12 @@
+h4 {
+  font-size: 1.4em !important;
+  margin-top: 50px !important;
+  margin-bottom: 20px !important;
+  color: #261623 !important;
+  font-weight: 400 !important;
+  text-align: center;
+}
+
 header .bg-header {
   background-color: #f3e9f1;
 }
@@ -22,7 +31,8 @@ header .bg-header nav .nav-shop .fas {
 
 .card {
   height: 300px;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
   border-radius: 12px !important;
   border: none !important;
   box-shadow: 1px 3px 8px #b4b4b4;
