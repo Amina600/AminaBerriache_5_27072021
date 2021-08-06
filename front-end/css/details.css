@@ -52,25 +52,25 @@ header .bg-header nav .nav-shop .fas {
   border-radius: 10px;
 }
 
-.detail-info {
+#detail-info {
   display: flex;
   flex-direction: column;
   margin: 50px;
 }
-.detail-info--name {
+#detail-info--name {
   height: 35px;
   border-bottom: solid 1px #261623;
   margin-bottom: 30px;
 }
-.detail-info--price {
+#detail-info--price {
   height: 35px;
   border-bottom: solid 1px #261623;
   margin-bottom: 30px;
 }
-.detail-info--color {
+#detail-info--color {
   margin-bottom: 30px;
 }
-.detail-info .btn {
+#detail-info .btn {
   margin-top: 30px;
   margin-bottom: 30px;
   background-color: #261623 !important;
@@ -79,11 +79,11 @@ header .bg-header nav .nav-shop .fas {
   padding-bottom: 13px;
   padding-top: 13px;
 }
-.detail-info .btn:hover {
+#detail-info .btn:hover {
   background-color: #462941 !important;
   border: none !important;
 }
-.detail-info--description {
+#detail-info--description {
   height: 35px;
   border-bottom: solid 1px #261623;
   margin-bottom: 10px;

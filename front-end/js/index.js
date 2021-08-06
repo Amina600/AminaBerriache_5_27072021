@@ -12,12 +12,13 @@ function loadUrl(){
                 return res.json();
             }
         })
+        
         .then(function(products) {
             displayProducts(products);
         })
         .catch(function(err) {
             alert("Impossible de charger les produits");
-        });
+        }); 
 }
 
 //Affichage produits sur la page
@@ -29,7 +30,7 @@ function displayProducts(products) {
         document.getElementById("product-container").innerHTML += `
         <div class="col-4">
             <div class="card">
-                <a href="detail-produit.html">
+                <a href="detail-produit.html?category=${category}&id=${product._id}">
                     <img src="${product.imageUrl}" class="card--photo" alt="photo de l'article"/>
                     <p class="card--info">
                         <span class="card--name"><strong>${product.name}</strong></span>
