@@ -17,23 +17,24 @@ function getProduct(){
             console.log(product);
         })
         .catch(function(err) {
-            alert("Impossible de charger les produits");
+            alert("Impossible de charger le détail du produit");
         })
 }
 // Affichage les propriétes de produits
 function displayDetailProduct(product){
     document.getElementById ("detail-info--name").innerHTML = product.name;
     document.getElementById ("detail-info--price").innerHTML = product.price / 100 + "€";
+    document.getElementById ("name-of-type").innerHTML = nameOfType (category);
+    
 
     // boucle qui permet de lister les caractéristiques de chaque proprièté dans des options d'un select
    for(let element  of changeType(category, product)) {
         document.getElementById("detail-info--type").innerHTML +=`<option selected value="${element}" >${element}</option>`;
-   }
-
+   };
     document.getElementById ("detail-info--description").innerHTML = product.description;
     document.getElementById ("image-product").src = product.imageUrl;
 }
-// fonction qui permet de changer chaque propriété de produit en fonction de sa catégorie 
+// fonction qui permet de changer chaque propriété(contient le choix de plusieurs options) de produit en fonction de sa catégorie 
 function changeType (category, product){
     if (category == "teddies") {
         return product.colors;
@@ -43,6 +44,21 @@ function changeType (category, product){
 
     } else if( category == "furniture") {
         return product.varnish;
+
+    } else {
+        return "";
+    }
+}
+// fonction permet de changer le nom de la proprièté en fonction de sa catégorie
+function nameOfType (category) {
+    if (category == "teddies") {
+        return "Couleur :";
+
+    } else if(category == "cameras") {
+        return "Objectif :";
+
+    } else if( category == "furniture") {
+        return "Vernis :";
 
     } else {
         return "";

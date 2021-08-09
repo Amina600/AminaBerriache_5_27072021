@@ -30,15 +30,17 @@ header .bg-header nav .nav-shop .fas {
 }
 
 .card {
-  height: 300px;
   margin-top: 30px;
   margin-bottom: 50px;
   border-radius: 12px !important;
   border: none !important;
   box-shadow: 1px 3px 8px #b4b4b4;
+  transition: all 0.4s ease-in-out;
 }
 .card a:hover {
   text-decoration: none;
+  box-shadow: 1px 3px 8px #8b8a8a;
+  border-radius: 12px !important;
 }
 .card--photo {
   width: 100%;
@@ -56,7 +58,7 @@ header .bg-header nav .nav-shop .fas {
 }
 
 .detail-photo {
-  max-width: 500px;
+  max-width: 550px;
   object-fit: cover;
   margin: 50px;
   border-radius: 10px;
