@@ -2,6 +2,7 @@ const url="http://localhost:3000/api/";
 // récupérration des params de l'url de la page catégorie + l'id
 let category= new URL(location.href).searchParams.get("category");
 let id = new URL(location.href).searchParams.get("id");
+let productInfo;
 getProduct();
 
 function getProduct(){
@@ -14,7 +15,6 @@ function getProduct(){
         })
         .then(function(product) {
             displayDetailProduct(product);
-            console.log(product);
         })
         .catch(function(err) {
             alert("Impossible de charger le détail du produit");
@@ -22,6 +22,7 @@ function getProduct(){
 }
 // Affichage les propriétes de produits
 function displayDetailProduct(product){
+    productInfo = product;
     document.getElementById ("detail-info--name").innerHTML = product.name;
     document.getElementById ("detail-info--price").innerHTML = product.price / 100 + "€";
     document.getElementById ("name-of-type").innerHTML = nameOfType (category);
@@ -65,4 +66,33 @@ function nameOfType (category) {
     }
 }
 
+// Ajout du produit au panier 
+const btn_send_cart = document.querySelector("#send-cart");
+const quantity_input = document.querySelector("#detail-info--quantity");
+const option_select = document.querySelector("#detail-info--type");
 
+btn_send_cart.addEventListener('click', (event) => {
+
+    let article = {
+        name : productInfo.name,
+        id : productInfo._id,
+        option : option_select.value,
+        quantity : quantity_input.value,
+        price : productInfo.price
+    }
+
+    // réccupérer panier et le parser
+    let cart = JSON.parse(localStorage.getItem("cart"));
+
+    // si le panier existe => ajouter le produit
+    if (cart) {
+        cart.push(article);
+    } 
+    // sinon créer un array avec le produit
+    else {
+        cart = [article];
+    }
+
+    // sauvgrader le panier dans le localStrorage 
+    localStorage.setItem("cart", JSON.stringify(cart));
+})

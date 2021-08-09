@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/details.css"/>
-    <script src="js/detail-produit.js"></script>
+    <script src="js/detail-produit.js" defer></script>
     <title>Détail de produit</title>
 </head>
 <body>
@@ -49,7 +49,7 @@
                         <input type="number" id="detail-info--quantity" name="quantity" 
                         value="1" min="1" max="100">
                     </label>
-                    <button type="submit" class="btn btn-secondary">Ajouter au panier</button>
+                    <button type="submit" id="send-cart" class="btn btn-secondary">Ajouter au panier</button>
                     <span>Description : </span>
                     <span id="detail-info--description"></span>
                 </p>
