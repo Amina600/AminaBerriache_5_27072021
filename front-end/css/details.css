@@ -83,16 +83,16 @@ header .bg-header nav .nav-shop .fas {
   margin-bottom: 30px;
 }
 #detail-info .btn {
+  background-color: #40253b !important;
+  border: none !important;
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: #261623 !important;
-  border: none !important;
   font-size: 1.2em;
   padding-bottom: 13px;
   padding-top: 13px;
 }
 #detail-info .btn:hover {
-  background-color: #462941 !important;
+  background-color: #563250 !important;
   border: none !important;
 }
 #detail-info--quantity {
@@ -114,49 +114,76 @@ header .bg-header nav .nav-shop .fas {
   margin-left: 20px;
 }
 
-h3 {
-  margin-top: 100px !important;
+.container-panier {
+  background-color: #f3e9f1;
+  padding-bottom: 800px;
+}
+
+#image-logo {
+  width: 200px;
+  margin: 30px;
+  text-align: center !important;
 }
 
 .container-form {
   margin-top: 20px;
   padding: 20px;
   box-shadow: 1px 3px 8px #b4b4b4;
+  background-color: #fff;
+}
+.container-form #send-cart {
+  background-color: #40253b !important;
+  border: none !important;
+  font-size: 1em;
+}
+.container-form #send-cart:hover {
+  background-color: #563250 !important;
+  border: none !important;
 }
 
-.container-resume {
+#container-cart {
   margin-top: 20px;
   padding: 20px;
   box-shadow: 1px 3px 8px #b4b4b4;
+  background-color: #fff;
+  color: #261623;
+  font-size: 1em;
 }
-.container-resume--commande {
+#container-cart #container-cart--commande {
   display: flex;
+  flex-direction: column;
   align-content: space-around;
   margin-bottom: 15px;
   border-bottom: 1px solid grey;
 }
-.container-resume--commande img {
-  width: 150px;
+#container-cart #container-cart--commande #image-product {
+  width: 90px;
   object-fit: cover;
-  margin: 10px;
+  margin-right: 15px;
 }
-.container-resume--commande .info {
+#container-cart #container-cart--commande .info {
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
-  align-items: center;
-  margin-left: 40px;
+  margin-bottom: 20px;
 }
-.container-resume--commande .info-details {
+#container-cart #container-cart--commande .info .groupes {
+  display: flex;
+}
+#container-cart #container-cart--commande .info .groupes .info-details {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
-.container-resume--commande .info-price {
-  margin-left: 105px;
+#container-cart #container-cart--commande #info-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-.container-resume--total {
+#container-cart--total {
   border-bottom: 1px solid grey;
 }
-.container-resume--total .show-total {
+#container-cart--total .show-total {
   display: flex;
   justify-content: space-between;
 }

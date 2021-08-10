@@ -76,9 +76,18 @@ btn_send_cart.addEventListener('click', (event) => {
     let article = {
         name : productInfo.name,
         id : productInfo._id,
+        image : productInfo.imageUrl,
         option : option_select.value,
         quantity : quantity_input.value,
         price : productInfo.price
+    }
+    const popupConfirmation = () => {
+        if (window.confirm(`Votre produit a été bien ajouter dans votre panier, 
+        voulez vous consulter votre panier OK ou continuer vos achat ANNULER?`)){
+            window.location.href = 'panier.html';
+        }else {
+            window.location.href = 'index.html';
+        }
     }
 
     // réccupérer panier et le parser
@@ -87,12 +96,15 @@ btn_send_cart.addEventListener('click', (event) => {
     // si le panier existe => ajouter le produit
     if (cart) {
         cart.push(article);
+        popupConfirmation();
     } 
     // sinon créer un array avec le produit
     else {
         cart = [article];
+        popupConfirmation();
     }
 
     // sauvgrader le panier dans le localStrorage 
     localStorage.setItem("cart", JSON.stringify(cart));
 })
+// Fenêtre popup

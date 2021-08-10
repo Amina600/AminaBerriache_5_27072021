@@ -21,18 +21,12 @@
 
     }
     .btn {
+        @include btn;
         margin-top: 30px;
         margin-bottom: 30px;
-        background-color: $color-primary !important;
-        border: none !important;
         font-size: 1.2em;
         padding-bottom:13px ;
         padding-top: 13px ;
-        &:hover {
-            background-color: lighten($color: #261623, $amount: 10%) !important;
-            border: none !important;
-            
-        }
     }
     &--quantity {
         margin-top: 30px;

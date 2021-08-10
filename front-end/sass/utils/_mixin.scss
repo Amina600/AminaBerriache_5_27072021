@@ -1,6 +1,15 @@
 @mixin border-bottom {
     //width: 100px;
     height: 35px;
-   
     border-bottom: solid 1px $color-primary;
+}
+@mixin btn {
+    
+    background-color: lighten($color: #261623, $amount: 8%) !important;
+    border: none !important;
+    &:hover {
+        background-color: lighten($color: #261623, $amount: 15%) !important;
+        border: none !important;
+        
+    }
 }

@@ -1,41 +1,71 @@
-h3 {
-    margin-top: 100px !important;
+//h3 {
+   // margin-top: 100px !important;
+//}
+.container-panier {
+    background-color: $color-secondary;
+    padding-bottom: 800px;
+    
 }
+#image-logo {
+    width: 200px;
+    margin: 30px;
+    text-align: center !important;
+    
+}
+        
+
+
 
 .container-form {
     margin-top: 20px;
     padding: 20px;
-    //background-color: lighten($color: $color-secondary, $amount: 2%);
     box-shadow: 1px 3px 8px rgb(180, 180, 180);
+    background-color: #fff;
+    #send-cart {
+        @include btn;
+        font-size: 1em;
+        
+    }
 }
 
-.container-resume {
+#container-cart {
     margin-top: 20px;
     padding: 20px;
     box-shadow: 1px 3px 8px rgb(180, 180, 180);
-    &--commande {
+    background-color: #fff;
+    color: $color-primary;
+    font-size: 1em;
+        
+
+    #container-cart--commande {
         display: flex;
+        flex-direction: column;
         align-content: space-around;
         margin-bottom: 15px;
         border-bottom: 1px solid grey;
-        img {
-            width: 150px;
+        #image-product {
+           width: 90px;
             object-fit: cover;
-            margin: 10px;
-            
+            margin-right: 15px;
         }
         .info {
             display: flex;
+            align-items: flex-end;
             justify-content: space-between;
-            align-items: center;
-            margin-left: 40px;
-            &-details{
+            margin-bottom: 20px;
+            .groupes {
                 display: flex;
-                flex-direction: column;
+                
+                .info-details{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
             }
-            &-price {
-                margin-left: 105px;
-            }
+        }#info-price {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
         }
     }
     &--total {
