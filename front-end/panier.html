@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/details.css"/>
     
 
-    <title>Panier</title>
+    <title>ORINOCO | Panier</title>
 </head>
 <body>
     <div class="container-panier">
@@ -49,7 +49,7 @@
                                 <input type="text" class="form-control" id="inputAddress" placeholder="Addresse">
                             </div>
                             <div class="form-row">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                 <label for="input-City">Ville</label>
                                 <input type="text" class="form-control" id="inputCity">
                                 </div>
@@ -59,8 +59,8 @@
                                     <option selected>FRANCE</option>
                                 </select>
                                 </div>
-                                <div class="form-group col-md-2">
-                                <label for="input-codepostal">C.postal</label>
+                                <div class="form-group col-md-4">
+                                <label for="input-codepostal">Code postal</label>
                                 <input type="text" class="form-control" id="input-codepostal">
                                 </div>
                             </div>
@@ -73,16 +73,13 @@
             <div class="col-5">
                     <h3>Récapitulatif</h3>
                     <div id="container-cart">
-                        <div id="container-cart--commande">
-                        
-                        </div>
+                        <div id="container-cart--commande"></div>
                         
                         <div id="container-cart--total">
                             <p class="show-total">
                                 <span class="total"><strong>Total</strong></span>
-                                <span class="price"><strong>80€</strong></span>
+                                <strong id="price"></strong>
                             </p>
-
                         </div>
                     </div>
             </div>

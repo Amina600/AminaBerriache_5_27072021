@@ -20,7 +20,7 @@ function getProduct(){
             alert("Impossible de charger le détail du produit");
         })
 }
-// Affichage les propriétes de produits
+// Affichage les propriètes de produits
 function displayDetailProduct(product){
     productInfo = product;
     document.getElementById ("detail-info--name").innerHTML = product.name;
@@ -81,14 +81,8 @@ btn_send_cart.addEventListener('click', (event) => {
         quantity : quantity_input.value,
         price : productInfo.price
     }
-    const popupConfirmation = () => {
-        if (window.confirm(`Votre produit a été bien ajouter dans votre panier, 
-        voulez vous consulter votre panier OK ou continuer vos achat ANNULER?`)){
-            window.location.href = 'panier.html';
-        }else {
-            window.location.href = 'index.html';
-        }
-    }
+    // Fenêtre popup confirmation
+    
 
     // réccupérer panier et le parser
     let cart = JSON.parse(localStorage.getItem("cart"));
@@ -96,15 +90,15 @@ btn_send_cart.addEventListener('click', (event) => {
     // si le panier existe => ajouter le produit
     if (cart) {
         cart.push(article);
-        popupConfirmation();
+        //popupConfirmation();
     } 
     // sinon créer un array avec le produit
     else {
         cart = [article];
-        popupConfirmation();
+        //popupConfirmation();
     }
 
     // sauvgrader le panier dans le localStrorage 
     localStorage.setItem("cart", JSON.stringify(cart));
 })
-// Fenêtre popup
+

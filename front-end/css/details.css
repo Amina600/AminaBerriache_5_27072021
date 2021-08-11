@@ -31,7 +31,7 @@ header .bg-header nav .nav-shop .fas {
 
 .card {
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   border-radius: 12px !important;
   border: none !important;
   box-shadow: 1px 3px 8px #b4b4b4;
@@ -112,6 +112,22 @@ header .bg-header nav .nav-shop .fas {
   height: 30px;
   width: 100px;
   margin-left: 20px;
+}
+
+.modal-body {
+  text-align: center !important;
+}
+
+.modal-footer {
+  justify-content: center !important;
+}
+.modal-footer .btn-achat {
+  background-color: #40253b !important;
+  border: none !important;
+}
+.modal-footer .btn-achat:hover {
+  background-color: #563250 !important;
+  border: none !important;
 }
 
 .container-panier {

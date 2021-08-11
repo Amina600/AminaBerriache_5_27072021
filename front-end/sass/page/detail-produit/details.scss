@@ -48,3 +48,12 @@
         }
     }
 }
+.modal-body {
+    text-align: center !important;
+}
+.modal-footer {
+    justify-content: center !important;
+    .btn-achat {
+        @include btn;
+    }
+}
