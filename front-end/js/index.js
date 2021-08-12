@@ -47,4 +47,3 @@ function changeCategory() {
     category = selectCategory.value;
     loadUrl();  
 }
-
