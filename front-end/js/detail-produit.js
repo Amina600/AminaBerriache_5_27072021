@@ -24,20 +24,20 @@ function getProduct(){
 // Affichage les propriètes de produits
 function displayDetailProduct(product){
     productInfo = product;
-    document.getElementById ("detail-info--name").innerHTML = product.name;
-    document.getElementById ("detail-info--price").innerHTML = product.price / 100 + "€";
-    document.getElementById ("name-of-type").innerHTML = nameOfType (category);
+    document.getElementById("detail-info--name").innerHTML = product.name;
+    document.getElementById("detail-info--price").innerHTML = product.price / 100 + "€";
+    document.getElementById("name-of-type").innerHTML = nameOfType (category);
 
     // boucle qui permet de lister les caractéristiques de chaque proprièté dans des options d'un select
    for(let element  of changeType(category, product)) {
         document.getElementById("detail-info--type").innerHTML +=`<option selected value="${element}" >${element}</option>`;
    };
-    document.getElementById ("detail-info--description").innerHTML = product.description;
-    document.getElementById ("image-product").src = product.imageUrl;
+    document.getElementById("detail-info--description").innerHTML = product.description;
+    document.getElementById("image-product").innerHTML= `<img src="${product.imageUrl}" class="detail-photo" alt="photo de l'article" />`;
 }
 
 // fonction qui permet de changer chaque propriété(contient le choix de plusieurs options) de produit en fonction de sa catégorie 
-function changeType (category, product){
+function changeType(category, product){
     if (category == "teddies") {
         return product.colors;
 
@@ -53,7 +53,7 @@ function changeType (category, product){
 }
 
 // fonction permet de changer le nom de la proprièté en fonction de sa catégorie
-function nameOfType (category) {
+function nameOfType(category) {
     if (category == "teddies") {
         return "Couleur :";
 
