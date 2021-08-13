@@ -1,10 +1,9 @@
-
-//chargement de la liste de produits
 const url="http://localhost:3000/api/";
 let category= "teddies";
-loadUrl();
+loadProducts();
 
-function loadUrl(){
+//chargement de la liste de produits
+function loadProducts(){
     fetch(url+category)
         //transforme le résultat en json
         .then(function(res) {
@@ -45,5 +44,5 @@ function displayProducts(products) {
 function changeCategory() {
     var selectCategory = document.getElementById("category");
     category = selectCategory.value;
-    loadUrl();  
+    loadProducts();  
 }

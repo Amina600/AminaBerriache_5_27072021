@@ -103,7 +103,7 @@ header .bg-header nav .nav-shop .fas {
 #detail-info--description {
   height: 90px;
   border-bottom: solid 1px #261623;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 #detail-info .selected {
   display: flex;
@@ -131,7 +131,7 @@ header .bg-header nav .nav-shop .fas {
 }
 
 .container-panier {
-  background-color: #f7f0f5 !important;
+  background-color: #f3e9f1 !important;
   padding-bottom: 800px;
 }
 
@@ -256,7 +256,7 @@ footer {
 }
 footer .container {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 footer .container ul {
   margin: 0;
