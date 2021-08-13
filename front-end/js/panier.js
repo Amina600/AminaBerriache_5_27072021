@@ -146,12 +146,13 @@ btnSendForm.addEventListener("click", (event) => {
             if (res.ok) {
               return res.json();
             }
-          })
-          .then(function(value) {
-            window.location.href = "success.html";
-          });
-    }
-    
+           
+        })
+        .then(function(value) {
+            console.log(value)
+            window.location.href = "success.html?id="+value.orderId;
+        });
+    } 
 })
 // fonctions de controles
 function validateEmail(email) {
@@ -163,3 +164,4 @@ function isValidName(name) {
     return validCharactersRegex.test(name.trim().toLowerCase());
 
 }
+

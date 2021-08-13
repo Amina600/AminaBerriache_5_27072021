@@ -131,7 +131,7 @@ header .bg-header nav .nav-shop .fas {
 }
 
 .container-panier {
-  background-color: #f3e9f1;
+  background-color: #f7f0f5 !important;
   padding-bottom: 800px;
 }
 
@@ -215,21 +215,40 @@ header .bg-header nav .nav-shop .fas {
   justify-content: space-between;
 }
 
-.success-row {
+.container-success {
+  background-color: #f7f0f5 !important;
+  padding-bottom: 800px;
+}
+.container-success .success-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 180px;
 }
-
-.success {
-  width: 500px;
-  height: 300px;
-  border: 1px solid black;
+.container-success .success-row .success {
+  max-width: 830px;
+  height: 400px;
+  box-shadow: 1px 3px 8px #b4b4b4;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  background-color: #fff;
+  margin-top: 150px;
+  padding: 50px;
+}
+.container-success .success-row .success h3 {
+  font-size: 1.5em;
+  color: #563250 !important;
+}
+.container-success .success-row .success p {
+  font-size: 1.1em;
+}
+.container-success .success-row .success a {
+  text-decoration: none;
+  color: #563250 !important;
+}
+.container-success .success-row .success a :hover {
+  color: #77456d !important;
 }
 
 footer {

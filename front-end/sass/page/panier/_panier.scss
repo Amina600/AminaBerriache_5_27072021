@@ -2,7 +2,7 @@
    // margin-top: 100px !important;
 //}
 .container-panier {
-    background-color: $color-secondary;
+    background-color: lighten($color: #f3e9f1, $amount: 2%) !important;
     padding-bottom: 800px;
     
 }

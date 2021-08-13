@@ -1,16 +1,38 @@
-.success-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 180px;
+.container-success {
+    background-color: lighten($color: #f3e9f1, $amount: 2%) !important;
+    padding-bottom: 800px;
+    .success-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .success {
+            max-width: 830px;
+            height: 400px;
+            box-shadow: 1px 3px 8px rgb(180, 180, 180);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #fff;
+            margin-top: 150px;
+            padding: 50px;
+            h3 {
+                font-size: 1.5em;
+                color:  lighten($color: #261623, $amount: 15%) !important;
+            }
+            p {
+                font-size: 1.1em;
+            }
+            a {
+                text-decoration: none;
+                color:  lighten($color: #261623, $amount: 15%) !important;
+                :hover {
+                    color: lighten($color: #261623, $amount: 25%) !important;
+                }
+            }
+        
+        }
+    }
 }
-.success {
-    width: 500px;
-    height: 300px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-}
