@@ -1,26 +1,6 @@
 let category= "teddies";
-//loadProducts();
-loadUrlGet(urlBase+category); 
-
-function displayResult( value){
-    displayProducts(value);
-}
-/*
-function loadProducts(){
-    fetch(url+category)
-        //transforme le résultat en json
-        .then(function(res) {
-            if (res.ok) {
-                return res.json();
-            }
-        })
-        .then(function(products) {
-            displayProducts(products);
-        })
-        .catch(function(err) {
-            alert("Impossible de charger les produits");
-        }); 
-}*/
+// Chargement des produits
+loadUrlGet(urlBase+category, displayProducts); 
 
 //Affichage produits sur la page
 function displayProducts(products) {
@@ -47,6 +27,6 @@ function displayProducts(products) {
 function changeCategory() {
     var selectCategory = document.getElementById("category");
     category = selectCategory.value;
-    //loadProducts(); 
-    loadUrlGet(urlBase+category); 
+    
+    loadUrlGet(urlBase+category, displayProducts); 
 }

@@ -59,6 +59,7 @@ calculPrice()
 
 // Formulaire
 const btnSendForm = document.querySelector("#send-cart");
+
 btnSendForm.addEventListener("click", (event) => {
     // Empêche l'envoie du formulaire par défault
     event.preventDefault();
@@ -165,6 +166,4 @@ function validateEmail(email) {
 function isValidName(name) {
     var validCharactersRegex =  /^[a-zA-Z ]+$/;
     return validCharactersRegex.test(name.trim().toLowerCase());
-
 }
-
