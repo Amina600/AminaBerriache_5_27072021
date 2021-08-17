@@ -1,12 +1,16 @@
-const url="http://localhost:3000/api/";
-
 // récupérration des params de l'url de la page catégorie + l'id
 let category= new URL(location.href).searchParams.get("category");
 let id = new URL(location.href).searchParams.get("id");
 let productInfo;
-getProduct();
 
-function getProduct(){
+loadUrlGet(urlBase+category+"/"+id); 
+
+function displayResult( value){
+    displayDetailProduct(value);
+}
+
+
+/*function getProduct(){
     fetch(url+category+"/"+id)
         //transforme le résultat en json
         .then(function(res) {
@@ -20,7 +24,7 @@ function getProduct(){
         .catch(function(err) {
             alert("Impossible de charger le détail du produit");
         })
-}
+}*/
 // Affichage les propriètes de produits
 function displayDetailProduct(product){
     productInfo = product;

@@ -1,8 +1,11 @@
-const url="http://localhost:3000/api/";
 let category= "teddies";
-loadProducts();
+//loadProducts();
+loadUrlGet(urlBase+category); 
 
-//chargement de la liste de produits
+function displayResult( value){
+    displayProducts(value);
+}
+/*
 function loadProducts(){
     fetch(url+category)
         //transforme le résultat en json
@@ -17,7 +20,7 @@ function loadProducts(){
         .catch(function(err) {
             alert("Impossible de charger les produits");
         }); 
-}
+}*/
 
 //Affichage produits sur la page
 function displayProducts(products) {
@@ -44,5 +47,6 @@ function displayProducts(products) {
 function changeCategory() {
     var selectCategory = document.getElementById("category");
     category = selectCategory.value;
-    loadProducts();  
+    //loadProducts(); 
+    loadUrlGet(urlBase+category); 
 }

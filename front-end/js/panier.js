@@ -45,7 +45,7 @@ updateCart()
 // Calcul le prix total 
 function calculPrice () {
     if (cart == null) {
-        // la fonction s'arrete !
+        // la fonction s'arrête !
         return;
     } else {
         let priceArticlesTotal = 0;
@@ -57,7 +57,7 @@ function calculPrice () {
 }
 calculPrice()
 
-//
+// Formulaire
 const btnSendForm = document.querySelector("#send-cart");
 btnSendForm.addEventListener("click", (event) => {
     // Empêche l'envoie du formulaire par défault
@@ -153,7 +153,7 @@ btnSendForm.addEventListener("click", (event) => {
                 sum += product.price /100;
             }
             // Redirection vers la page success
-            window.location.href = "success.html?id="+value.orderId+"&price="+ sum + "€";
+            window.location.href = "confirmation.html?id="+value.orderId+"&price="+ sum + "€";
         });
     } 
 })
