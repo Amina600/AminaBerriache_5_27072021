@@ -4,8 +4,9 @@ const urlBase="http://localhost:3000/api/";
 function loadUrlGet(url, callback){ 
     // création de la promesse
     let myPromise = new Promise(function(myResolve, myReject) {
+      // Initialise une requête
         let req = new XMLHttpRequest();
-        // Initialise une requête
+        // ouvrir une connexion à l'url
         req.open('GET', url);
         req.onload = function() {
           if (req.status == 200) {
