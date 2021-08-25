@@ -44,8 +44,8 @@ updateCart()
 
 // Calcul le prix total 
 function calculPrice () {
-    if (cart == null) {
-        // la fonction s'arrête !
+    if (!cart || !cart.length) {
+         // la fonction s'arrête !
         return;
     } else {
         let priceArticlesTotal = 0;
@@ -153,7 +153,7 @@ btnSendForm.addEventListener("click", (event) => {
             for(let product of value.products){
                 sum += product.price /100;
             }
-            
+
             // Redirection vers la page confirmation en passant les paramètres identifiant 
             //et la somme des produits dans l'url
             window.location.href = "confirmation.html?id="+value.orderId+"&price="+ sum + "€";
