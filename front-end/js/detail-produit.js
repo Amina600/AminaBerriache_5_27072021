@@ -79,6 +79,6 @@ btn_send_cart.addEventListener('click', (event) => {
     else {
         cart = [article];
     }
-    // sauvgrader le panier dans le localStrorage en  transformant le panier en JSON 
+    // sauvgrader le panier dans le localStrorage en le transformant en JSON 
     localStorage.setItem("cart", JSON.stringify(cart));
 })
