@@ -148,13 +148,18 @@ btnSendForm.addEventListener("click", (event) => {
             }
         })
         .then(function(value) {
-            // calculer la somme des produits de la commandes avant la redirection vers la page success
+            // calculer la somme des produits de la commandes avant la redirection vers la page confirmation 
             let sum = 0;
             for(let product of value.products){
                 sum += product.price /100;
             }
-            // Redirection vers la page success
+            
+            // Redirection vers la page confirmation en passant les paramètres identifiant 
+            //et la somme des produits dans l'url
             window.location.href = "confirmation.html?id="+value.orderId+"&price="+ sum + "€";
+
+            // Vider le panier dans localstorage 
+            localStorage.clear("cart");
         });
     } 
 })

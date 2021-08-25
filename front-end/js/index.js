@@ -25,7 +25,7 @@ function displayProducts(products) {
 
 //changement de catégorie
 function changeCategory() {
-    var selectCategory = document.getElementById("category");
+    let selectCategory = document.getElementById("category");
     category = selectCategory.value;
     
     loadUrlGet(urlBase+category, displayProducts); 

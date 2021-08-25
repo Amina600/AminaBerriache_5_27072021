@@ -23,7 +23,7 @@ function loadUrlGet(url, callback){
  
     myPromise.then(
         function(value) {
-            //transforme le résultat en json
+            // Elle transfomre le résultat en objet javascript et appelle la callback
             callback(JSON.parse(value));
         },
         function(error) {

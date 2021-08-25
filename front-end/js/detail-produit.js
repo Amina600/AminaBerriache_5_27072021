@@ -1,4 +1,4 @@
-// récupérration des params de l'url de la page catégorie + l'id
+// récupération des params de l'url catégorie + l'id
 let category= new URL(location.href).searchParams.get("category");
 let id = new URL(location.href).searchParams.get("id");
 let productInfo;
@@ -20,7 +20,7 @@ function displayDetailProduct(product){
     document.getElementById("image-product").innerHTML= `<img src="${product.imageUrl}" class="detail-photo" alt="photo de l'article" />`;
 }
 
-// fonction qui permet de réccupérer la propriété d'option du produit en fonction de sa catégorie 
+// fonction qui permet de réccupérer les options du produit en fonction de sa catégorie 
 function getOption(category, product){
     if (category == "teddies") {
         return product.colors;
@@ -68,7 +68,7 @@ btn_send_cart.addEventListener('click', (event) => {
         price : productInfo.price
     };
 
-    // réccupérer panier et le parser
+    // réccupérer panier qui est dans le localSorage et le parser
     let cart = JSON.parse(localStorage.getItem("cart"));
 
     // si le panier existe => ajouter le produit
@@ -79,6 +79,6 @@ btn_send_cart.addEventListener('click', (event) => {
     else {
         cart = [article];
     }
-    // sauvgrader le panier dans le localStrorage 
+    // sauvgrader le panier dans le localStrorage en  transformant le panier en JSON 
     localStorage.setItem("cart", JSON.stringify(cart));
 })
