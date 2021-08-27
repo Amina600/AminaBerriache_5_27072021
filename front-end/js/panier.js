@@ -91,33 +91,67 @@ btnSendForm.addEventListener("click", (event) => {
         // Sinon on supprime la classe
         firstNameInput.classList.remove("is-invalid");
     }
+    if (contact.firstName == "" || !isValidName(contact.firstName)){
+       isValid = false;
+       // S'il y a une erreur, on ajoute une classe is-invalid
+       firstNameInput.classList.add("is-invalid");
+       if(contact.firstName == ""){
+           document.getElementById('error-name').innerHTML = "Champ obligatoire";
+       }else{
+            document.getElementById('error-name').innerHTML = "Prénom invalide";
+       }
+    }else {
+        // Sinon on supprime la classe
+        firstNameInput.classList.remove("is-invalid");
+        document.getElementById('error-name').innerHTML = "";
+    }
     // Lastname
     if (contact.lastName == "" || !isValidName(contact.lastName)){
         isValid = false;
         lastNameInput.classList.add("is-invalid");
+        if(contact.lastName == ""){
+            document.getElementById('error-lastname').innerHTML = "Champ obligatoire";
+        }else{
+             document.getElementById('error-lastname').innerHTML = "Nom invalide";
+        }
      }else {
         lastNameInput.classList.remove("is-invalid");
+        document.getElementById('error-lastname').innerHTML = "";
      }
      // Email
     if (contact.email == "" || !validateEmail(contact.email)){
         isValid = false;
         emailInput.classList.add("is-invalid");
+        if(contact.email == ""){
+            document.getElementById('error-email').innerHTML = "Champ obligatoire";
+        }else{
+             document.getElementById('error-email').innerHTML = "Email invalide";
+        }
     }else {
         emailInput.classList.remove("is-invalid");
+        document.getElementById('error-email').innerHTML = "";
     }
     // Address 
-    if (contact.address == "" || typeof contact.city !== 'string'){
+    if (contact.address == "" || typeof contact.address !== 'string'){
         isValid = false;
         addressInput.classList.add("is-invalid");
+        if(contact.address == ""){
+            document.getElementById('error-address').innerHTML = "Champ obligatoire";
+        }
     }else {
         addressInput.classList.remove("is-invalid");
+        document.getElementById('error-address').innerHTML = "";
     }
      // City
     if (contact.city == "" || typeof contact.city !== 'string' ){
         isValid = false;
         cityInput.classList.add("is-invalid");
+        if(contact.city == ""){
+            document.getElementById('error-city').innerHTML = "Champ obligatoire";
+        }
     }else {
         cityInput.classList.remove("is-invalid");
+        document.getElementById('error-city').innerHTML = "";
     }
     // panier vide ou mélange de catégories
     let category;
@@ -133,7 +167,6 @@ btnSendForm.addEventListener("click", (event) => {
             }
         }
     }
-
     // Si le formulaire est valide, réccupération de l'ID des produits et les mettre dans un tableau
     if(isValid) { 
         // réccupérer ID des produits et les mettre dans un tableau

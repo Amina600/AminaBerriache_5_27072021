@@ -17,15 +17,15 @@
 </head>
 <body>
     <div class="container-panier">
-        <div class="container">
+        <div class="container container-header">
             <header id="nav-panier">
                 <div class="bg-header">
                     <div class=" container">
                         <nav class="row navbar navbar-expand nav-panier">
-                          <a class="col-9 navbar-brand" href="index.html">
+                          <a class="col-10 navbar-brand" href="index.html">
                               <img src="images/logo.png" alt="logo de la page Orinico">
                             </a>
-                            <ul class="col-3 navbar-nav">
+                            <ul class="col-2 navbar-nav">
                                 <li class="col nav-item active">
                                     <a class="nav-articles" href="index.html">Nos produits</a>
                                 </li>
@@ -34,6 +34,8 @@
                     </div>
                   </div>
             </header>
+        </div>
+        <div class="container">
             <div class="row">
             <div class="col-6">
                     <h3>Informations personelles</h3>
@@ -43,27 +45,42 @@
                             <div class="col">
                                 <label for="input-name">Prénom</label>
                                 <input required = "required" type="text" id="input-name" class="form-control" placeholder="Prénom" />
+                                <div id="error-name" class="color-red">
+                                   
+                                </div>
                                 
                             </div>
                             <div class="col">
                                 <label for="input-lastname">Nom</label>
                                 <input type="text" id="input-lastname" class="form-control" placeholder="Nom" required />
+                                <div id="error-lastname" class="color-red">
+                                    
+                                </div>
                             </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md">
                                 <label for="input-email">Email</label>
                                 <input type="email" class="form-control" id="input-email" placeholder="Email" required />
+                                <div id="error-email" class="color-red">
+                                   
+                                </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="input-address">Adresse</label>
                                 <input type="text" class="form-control" id="input-address" placeholder="Addresse" required />
+                                <div id="error-address" class="color-red">
+                                   
+                                </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md">
                                 <label for="input-city">Ville</label>
                                 <input type="text" class="form-control" placeholder="Ville" id="input-city" required />
+                                <div id="error-city" class="color-red">
+                                    
+                                </div>
                                 </div>
                             </div>
                             <div class="btn-center">
@@ -110,7 +127,7 @@
             <div class="modal-content">
                 
             <div class="modal-body">
-                  Votre panier contient des articles de différente catégories. Veuillez faire une commande par catégorie.
+                  Votre panier contient des articles de différentes catégories. Veuillez faire une commande par catégorie.
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary btn-achat" data-dismiss="modal">Ok</button>

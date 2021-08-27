@@ -130,13 +130,21 @@ header .bg-header nav .nav-shop .fas {
   border: none !important;
 }
 
-#nav-panier {
+.container-header {
+  box-shadow: 0px 0px 5px #261623;
+  max-width: 100% !important;
+}
+.container-header #nav-panier {
   margin-bottom: 50px !important;
 }
 
 .container-panier {
   background-color: #f3e9f1 !important;
   padding-bottom: 800px;
+}
+
+h3 {
+  font-size: 1.5em;
 }
 
 #image-logo {
@@ -150,6 +158,10 @@ header .bg-header nav .nav-shop .fas {
   padding: 20px;
   box-shadow: 1px 3px 8px #b4b4b4;
   background-color: #fff;
+}
+#container-form .color-red {
+  color: #be0808;
+  font-size: 0.75em;
 }
 #container-form .btn-center {
   text-align: center !important;
