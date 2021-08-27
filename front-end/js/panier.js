@@ -119,8 +119,14 @@ btnSendForm.addEventListener("click", (event) => {
     }else {
         cityInput.classList.remove("is-invalid");
     }
+    // panier vide 
+    if(!cart || cart.length == 0){
+        isValid = false;
+        $('#emptyModal').modal();
+
+    }
     // Si le formulaire est valide, réccupération de l'ID des produits et les mettre dans un tableau
-    if (isValid) { 
+    if(isValid) { 
         // réccupérer ID des produits et les mettre dans un tableau
         let arrayId =[];
         for (let article of cart){
