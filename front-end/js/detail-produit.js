@@ -65,7 +65,8 @@ btn_send_cart.addEventListener('click', (event) => {
         image : productInfo.imageUrl,
         option : option_select.value,
         quantity : quantity_input.value,
-        price : productInfo.price
+        price : productInfo.price,
+        category : category
     };
 
     // réccupérer panier qui est dans le localSorage et le parser

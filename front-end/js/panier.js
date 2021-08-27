@@ -119,12 +119,21 @@ btnSendForm.addEventListener("click", (event) => {
     }else {
         cityInput.classList.remove("is-invalid");
     }
-    // panier vide 
+    // panier vide ou mélange de catégories
+    let category;
     if(!cart || cart.length == 0){
         isValid = false;
         $('#emptyModal').modal();
-
+    } else{
+        category = cart[0].category;
+        for(let article of cart){
+            if(article.category !== category){
+                isValid = false;
+                $('#checkModal').modal();
+            }
+        }
     }
+
     // Si le formulaire est valide, réccupération de l'ID des produits et les mettre dans un tableau
     if(isValid) { 
         // réccupérer ID des produits et les mettre dans un tableau
@@ -141,7 +150,7 @@ btnSendForm.addEventListener("click", (event) => {
             contact
         };
         // Envoyer les objets vers le serveur avec post 
-        fetch("http://localhost:3000/api/teddies/order", {
+        fetch(urlBase + category + "/order", {
             method: "POST",
             headers: { 
                 'Accept': 'application/json', 
