@@ -218,6 +218,6 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 function isValidName(name) {
-    var validCharactersRegex =  /^[a-z]{1}[a-z -]*$/;
+    var validCharactersRegex =  /^[a-zéèàùûêâôë][a-zéèàùûêâôë \'-]+[a-zéèàùûêâôë]$/;
     return validCharactersRegex.test(name.trim().toLowerCase());
 }
