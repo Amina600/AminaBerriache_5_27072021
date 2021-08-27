@@ -130,6 +130,10 @@ header .bg-header nav .nav-shop .fas {
   border: none !important;
 }
 
+#nav-panier {
+  margin-bottom: 50px !important;
+}
+
 .container-panier {
   background-color: #f3e9f1 !important;
   padding-bottom: 800px;
