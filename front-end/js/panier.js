@@ -86,6 +86,7 @@ btnSendForm.addEventListener("click", (event) => {
        isValid = false;
        // S'il y a une erreur, on ajoute une classe is-invalid
        firstNameInput.classList.add("is-invalid");
+       
     }else {
         // Sinon on supprime la classe
         firstNameInput.classList.remove("is-invalid");
@@ -119,7 +120,7 @@ btnSendForm.addEventListener("click", (event) => {
         cityInput.classList.remove("is-invalid");
     }
     // Si le formulaire est valide, réccupération de l'ID des produits et les mettre dans un tableau
-    if (isValid) {
+    if (isValid) { 
         // réccupérer ID des produits et les mettre dans un tableau
         let arrayId =[];
         for (let article of cart){
@@ -161,7 +162,7 @@ btnSendForm.addEventListener("click", (event) => {
             // Vider le panier dans localstorage 
             localStorage.clear("cart");
         });
-    } 
+    }
 })
 // fonctions de controles formulaire
 function validateEmail(email) {
@@ -169,6 +170,6 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 function isValidName(name) {
-    var validCharactersRegex =  /^[a-zA-Z ]+$/;
+    var validCharactersRegex =  /^[a-z]{1}[a-z -]*$/;
     return validCharactersRegex.test(name.trim().toLowerCase());
 }
